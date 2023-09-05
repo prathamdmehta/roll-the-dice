@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="instruction">
+      <div class="close-button">&times;</div>
+      <h1>Instruction to play👇</h1>
+      <ol>
+        <li>Each player takes turns rolling the die.</li>
+        <li>On your turn, roll the die by clicking a "Roll" button</li>
+        <li>
+          If you roll a 1, you lose all your accumulated points for that turn,
+          and it becomes the next player's turn.
+        </li>
+        <li>
+          If you roll any number other than 1, the number is added to your
+          current turn's points.
+        </li>
+        <li>
+          You can continue rolling the die to accumulate more points in the
+          current turn, or choose to "Hold" your points.
+        </li>
+        <li>
+          If you choose to "Hold," the accumulated points for the current turn
+          are added to your total score, and it becomes the next player's turn.
+        </li>
+        <li>The first player to reach 100 points wins the game.</li>
+      </ol>
+      <p>Enjoy the game and have fun <span>😄</span></p>
+    </div>
+    <main>
+      <div class="player-1 flex">
+        <div class="total-score-section">
+          <h2 class="celebrate-1">Player 1</h2>
+          <p class="total-score-1">0</p>
+        </div>
+        <div class="current-score-section-1">
+          <h3>current</h3>
+          <p class="current-score-1" id="current--1">0</p>
+        </div>
+        <!-- <div class="player-inactive hidden overlay-1"></div> -->
+      </div>
+      <div class="player-2 flex player-inactive">
+        <div class="total-score-section">
+          <h2 class="celebrate-2">Player 2</h2>
+          <p class="total-score-2">0</p>
+        </div>
+        <div class="current-score-section-2">
+          <h3>current</h3>
+          <p class="current-score-2" id="current--2">0</p>
+        </div>
+        <!-- <div class="player-inactive overlay-2"></div> -->
+      </div>
+      <button class="new-game btn">🔄 New Game</button>
+      <button class="roll-dice btn">🎲 Roll Dice</button>
+      <button class="pause-game btn">⏸️ Hold</button>
+
+      <img
+        class="dice-image hidden"
+        src="dice-6.png"
+        alt="dice-rolling image"
+      />
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
